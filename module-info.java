@@ -1,0 +1,2 @@
+module pay_simple {
+}
