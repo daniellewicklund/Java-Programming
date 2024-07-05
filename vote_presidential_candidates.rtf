@@ -1,0 +1,360 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 Helvetica-Oblique;
+\f3\fswiss\fcharset0 Helvetica-BoldOblique;}
+{\colortbl;\red255\green255\blue255;\red127\green0\blue85;\red106\green62\blue62;\red63\green127\blue95;
+\red42\green0\blue255;\red0\green0\blue192;}
+{\*\expandedcolortbl;;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c41569\c24314\c24314;\csgenericrgb\c24706\c49804\c37255;
+\csgenericrgb\c16471\c0\c100000;\csgenericrgb\c0\c0\c75294;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf2 package
+\f1\b0 \cf0  vote_presidential_candidates;\
+
+\f0\b \cf2 import
+\f1\b0 \cf0  javax.swing.JOptionPane;\
+
+\f0\b \cf2 public
+\f1\b0 \cf0  
+\f0\b \cf2 class
+\f1\b0 \cf0  vote_presidential_candidates\
+\{\
+	
+\f0\b \cf2 public
+\f1\b0 \cf0  
+\f0\b \cf2 static
+\f1\b0 \cf0  
+\f0\b \cf2 void
+\f1\b0 \cf0  main(String[] \cf3 args\cf0 ) \
+	\{		\
+\cf4 // Define all variables needed.\cf0 \
+		String \cf3 registration\cf0 ,\cf3 gender\cf0 ,\cf3 candidate\cf0 ;\
+		String \cf3 economy\cf0 , \cf3 civil\cf0 , \cf3 coronavirus\cf0 ;\
+		
+\f0\b \cf2 double
+\f1\b0 \cf0  \cf3 democrat_voters\cf0 =0,\cf3 republican_voters\cf0 =0,\cf3 other_voters\cf0 =0,\cf3 total_voters\cf0 =0;\
+		
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf3 democrat\cf0 =0,\cf3 republican\cf0 =0,\cf3 other\cf0 =0;\
+		
+\f0\b \cf2 double
+\f1\b0 \cf0  \cf3 female_voters\cf0 =0,\cf3 male_voters\cf0 =0;\
+		
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf3 female\cf0 =0,\cf3 male\cf0 =0;\
+		
+\f0\b \cf2 double
+\f1\b0 \cf0  \cf3 trump_voters\cf0 =0,\cf3 biden_voters\cf0 =0;\
+		
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf3 trump\cf0 =0,\cf3 biden\cf0 =0;\
+		
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf3 eco_trump\cf0 =0,\cf3 eco_biden\cf0 =0;\
+		
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf3 civil_trump\cf0 =0,\cf3 civil_biden\cf0 =0;\
+		
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf3 corona_trump\cf0 =0,\cf3 corona_biden\cf0 =0;\
+		
+\f0\b \cf2 double
+\f1\b0 \cf0  \cf3 percent_female_trump_voters\cf0 , \cf3 percent_female_biden_voters\cf0 ;\
+		
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf3 trump_females\cf0 =0,\cf3 biden_females\cf0 =0;\
+		
+\f0\b \cf2 double
+\f1\b0 \cf0  \cf3 percent_male_trump_voters\cf0 , \cf3 percent_male_biden_voters\cf0 ;\
+		
+\f0\b \cf2 int
+\f1\b0 \cf0  \cf3 trump_males\cf0 =0, \cf3 biden_males\cf0 =0;\
+		
+\f0\b \cf2 double
+\f1\b0 \cf0  \cf3 percent_democrat_trump_voters\cf0 , \cf3 percent_republican_biden_voters\cf0 ;\
+		
+\f0\b \cf2 double
+\f1\b0 \cf0  \cf3 percent_trump_economy\cf0 , \cf3 percent_trump_civil\cf0 , \cf3 percent_trump_coronavirus\cf0 ;\
+		
+\f0\b \cf2 double
+\f1\b0 \cf0  \cf3 percent_biden_economy\cf0 , \cf3 percent_biden_civil\cf0 , \cf3 percent_biden_coronavirus\cf0 ;\
+		String \cf3 more_data\cf0 =\cf5 "yes"\cf0 ;\
+		
+\f0\b \cf2 while
+\f1\b0 \cf0 (\cf3 more_data\cf0 .equals(\cf5 "yes"\cf0 ))\
+			\{\
+			\
+\cf4 // The data reads in the registration of the voter (Democrat, Republican, or Other).			\cf0 \
+		\cf3 registration\cf0 =JOptionPane.
+\f2\i showInputDialog
+\f1\i0 (
+\f0\b \cf2 null
+\f1\b0 \cf0 ,\
+                 \cf5 "Enter your voter registration (Democrat, Republican, or Other) "\cf0 , \cf5 ""\cf0 ,JOptionPane.
+\f3\i\b \cf6 QUESTION_MESSAGE
+\f1\i0\b0 \cf0 );\
+\cf4 // The data reads in the gender of the voter (Female or Male).			\cf0 \
+		\cf3 gender\cf0 =JOptionPane.
+\f2\i showInputDialog
+\f1\i0 (
+\f0\b \cf2 null
+\f1\b0 \cf0 ,\
+                \cf5 "Enter your gender (Female or Male) "\cf0 , \cf5 ""\cf0 ,JOptionPane.
+\f3\i\b \cf6 QUESTION_MESSAGE
+\f1\i0\b0 \cf0 );\
+\cf4 // The data reads in the Presidential candidate the voter is choosing (Trump or \ul Biden\ulnone ).\cf0 \
+		\cf3 candidate\cf0 =JOptionPane.
+\f2\i showInputDialog
+\f1\i0 (
+\f0\b \cf2 null
+\f1\b0 \cf0 ,\
+                \cf5 "Enter the Presidential candidate you are choosing (Trump or Biden) "\cf0 , \cf5 ""\cf0 ,JOptionPane.
+\f3\i\b \cf6 QUESTION_MESSAGE
+\f1\i0\b0 \cf0 );\
+\cf4 // The data reads in which candidate has done better to manage the economy? (Trump or \ul Biden\ulnone ).\cf0 \
+		\cf3 economy\cf0 =JOptionPane.
+\f2\i showInputDialog
+\f1\i0 (
+\f0\b \cf2 null
+\f1\b0 \cf0 ,\
+                \cf5 "Which candidate has done better to manage the economy? (Trump or Biden) "\cf0 , \cf5 ""\cf0 ,JOptionPane.
+\f3\i\b \cf6 QUESTION_MESSAGE
+\f1\i0\b0 \cf0 );\
+\cf4 // The data reads in which candidate has done better to manage civil unrest? (Trump or \ul Biden\ulnone ).\cf0 \
+		\cf3 civil\cf0 =JOptionPane.
+\f2\i showInputDialog
+\f1\i0 (
+\f0\b \cf2 null
+\f1\b0 \cf0 ,\
+		         \cf5 "Which candidate has done better to manage civil unrest? (Trump or Biden) "\cf0 , \cf5 ""\cf0 ,JOptionPane.
+\f3\i\b \cf6 QUESTION_MESSAGE
+\f1\i0\b0 \cf0 );\
+\cf4 // The data reads in which candidate has done better to manage the \ul coronavirus\ulnone ? (Trump or \ul Biden\ulnone ).\cf0 \
+		\cf3 coronavirus\cf0 =JOptionPane.
+\f2\i showInputDialog
+\f1\i0 (
+\f0\b \cf2 null
+\f1\b0 \cf0 ,\
+				 \cf5 "Which candidate has done better to manage coronavirus? (Trump or Biden) "\cf0 , \cf5 ""\cf0 ,JOptionPane.
+\f3\i\b \cf6 QUESTION_MESSAGE
+\f1\i0\b0 \cf0 );\
+		\
+\cf4 // Start the loop that reads in ALL data:\cf0 \
+		
+\f0\b \cf2 if
+\f1\b0 \cf0 (\cf3 registration\cf0 .equals(\cf5 "Democrat"\cf0 ))\
+		  	\cf3 democrat\cf0 =\cf3 democrat\cf0 +1;\
+		
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+			
+\f0\b \cf2 if
+\f1\b0 \cf0 (\cf3 registration\cf0 .equals(\cf5 "Republican"\cf0 ))\
+				\cf3 republican\cf0 =\cf3 republican\cf0 +1;\
+			
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+			   \cf3 other\cf0 =\cf3 other\cf0 +1;\
+			\
+		
+\f0\b \cf2 if
+\f1\b0 \cf0 (\cf3 gender\cf0 .equals(\cf5 "Female"\cf0 ))\
+			\cf3 female\cf0 =\cf3 female\cf0 +1;\
+		
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+			\cf3 male\cf0 =\cf3 male\cf0 +1;\
+			\
+		
+\f0\b \cf2 if
+\f1\b0 \cf0 (\cf3 candidate\cf0 .equals(\cf5 "Trump"\cf0 ))\
+			\cf3 trump\cf0 =\cf3 trump\cf0 +1;\
+		
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+			\cf3 biden\cf0 =\cf3 biden\cf0 +1;\
+			\
+		
+\f0\b \cf2 if
+\f1\b0 \cf0 (\cf3 economy\cf0 .equals(\cf5 "Trump"\cf0 ))\
+			\cf3 eco_trump\cf0 =\cf3 eco_trump\cf0 +1;\
+		
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+			\cf3 eco_biden\cf0 =\cf3 eco_biden\cf0 +1;\
+		\
+		
+\f0\b \cf2 if
+\f1\b0 \cf0 (\cf3 civil\cf0 .equals(\cf5 "Trump"\cf0 ))\
+			\cf3 civil_trump\cf0 =\cf3 civil_trump\cf0 +1;\
+		
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+			\cf3 civil_biden\cf0 =\cf3 civil_biden\cf0 +1;\
+			\
+		
+\f0\b \cf2 if
+\f1\b0 \cf0 (\cf3 coronavirus\cf0 .equals(\cf5 "Trump"\cf0 ))\
+				\cf3 corona_trump\cf0 =\cf3 corona_trump\cf0 +1;\
+		
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+				\cf3 corona_biden\cf0 =\cf3 corona_biden\cf0 +1;\
+		\
+		\cf4 // Compound Conditions:\cf0 \
+		
+\f0\b \cf2 if
+\f1\b0 \cf0 ((\cf3 gender\cf0 .equals(\cf5 "Female"\cf0 ))&&(\cf3 candidate\cf0 .equals(\cf5 "Trump"\cf0 )))\
+			\cf3 trump_females\cf0 =\cf3 trump_females\cf0 +1;\
+		
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+			\cf3 biden_females\cf0 =\cf3 biden_females\cf0 +1;\
+		\
+		
+\f0\b \cf2 if
+\f1\b0 \cf0 ((\cf3 gender\cf0 .equals(\cf5 "Male"\cf0 ))&&(\cf3 candidate\cf0 .equals(\cf5 "Trump"\cf0 )))\
+			\cf3 trump_males\cf0 =\cf3 trump_males\cf0 +1;\
+		
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+			\cf3 biden_males\cf0 =\cf3 biden_males\cf0 +1;\
+		     \cf3 more_data\cf0 =JOptionPane.
+\f2\i showInputDialog
+\f1\i0 (
+\f0\b \cf2 null
+\f1\b0 \cf0 ,\
+		    		 \cf5 "Enter more ? yes/no"\cf0 , \cf5 ""\cf0 ,JOptionPane.
+\f3\i\b \cf6 QUESTION_MESSAGE
+\f1\i0\b0 \cf0 );\
+		     \}\cf4 //End of the While Loop. Asks the user if he/she wants to enter more data.\cf0 \
+\
+\cf4 // Count each thing you need to count:\cf0 \
+		\cf3 total_voters\cf0 =\cf3 female\cf0 +\cf3 male\cf0 ;\
+		\cf3 female_voters\cf0 =\cf3 female\cf0 ;	\
+		\cf3 male_voters\cf0 =\cf3 male\cf0 ;\
+		\cf3 democrat_voters\cf0 =\cf3 democrat\cf0 ;\
+		\cf3 republican_voters\cf0 =\cf3 republican\cf0 ; \
+		\cf3 other_voters\cf0 =\cf3 other\cf0 ;\
+\cf4 // Mathematical calculations:	\cf0 \
+		\cf3 percent_female_trump_voters\cf0 =\cf3 trump_females\cf0 *1.0/\cf3 female\cf0 ;\
+		\cf3 percent_female_biden_voters\cf0 =\cf3 biden_females\cf0 *1.0/\cf3 female\cf0 ;\
+		\cf3 percent_male_trump_voters\cf0 =\cf3 trump_males\cf0 *1.0/\cf3 male\cf0 ;\
+		\cf3 percent_male_biden_voters\cf0 =\cf3 biden_males\cf0 *1.0/\cf3 male\cf0 ;\
+		\cf3 percent_democrat_trump_voters\cf0 =\cf3 democrat_voters\cf0 *1.0/\cf3 trump\cf0 ;\
+		\cf3 percent_republican_biden_voters\cf0 =\cf3 republican_voters\cf0 *1.0/\cf3 biden\cf0 ;\
+		\cf3 percent_trump_economy\cf0 =\cf3 eco_trump\cf0 *1.0/\cf3 total_voters\cf0 ;\
+		\cf3 percent_trump_civil\cf0 =\cf3 civil_trump\cf0 *1.0/\cf3 total_voters\cf0 ;\
+		\cf3 percent_trump_coronavirus\cf0 =\cf3 corona_trump\cf0 *1.0/\cf3 total_voters\cf0 ;\
+		\cf3 percent_biden_economy\cf0 =\cf3 eco_biden\cf0 *1.0/\cf3 total_voters\cf0 ;\
+		\cf3 percent_biden_civil\cf0 =\cf3 civil_biden\cf0 *1.0/\cf3 total_voters\cf0 ;\
+		\cf3 percent_biden_coronavirus\cf0 =\cf3 corona_biden\cf0 *1.0/\cf3 total_voters\cf0 ;\
+	\
+\cf4 // Prints the candidate who won.\cf0 \
+
+\f0\b \cf2 if
+\f1\b0 \cf0 (\cf3 trump_voters\cf0 >\cf3 biden_voters\cf0 )\
+	\{\
+	System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Trump is the candidate who won! "\cf0 +\cf5 "\\n"\cf0 );	\
+	\}\
+
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+	
+\f0\b \cf2 if
+\f1\b0 \cf0 (\cf3 biden_voters\cf0 >\cf3 trump_voters\cf0 )\
+	\{\
+	System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Biden is the candidate who won! "\cf0 +\cf5 "\\n"\cf0 );	\
+	\}\
+
+\f0\b \cf2 if
+\f1\b0 \cf0 (\cf3 trump\cf0 >\cf3 biden\cf0 )\
+	System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Trump is the candidate who won! "\cf0 +\cf5 "\\n"\cf0 );	\
+
+\f0\b \cf2 else
+\f1\b0 \cf0 \
+	System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Biden is the candidate who won! "\cf0 +\cf5 "\\n"\cf0 );\
+\cf4 // Prints the total number of voters.\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Total number of voters: "\cf0 + \cf3 total_voters\cf0 );\
+\cf4 // Prints the number of female voters.\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Total number of female voters: "\cf0 + \cf3 female_voters\cf0 );\
+\cf4 // Prints the number of male voters.\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Total number of male voters: "\cf0 + \cf3 male_voters\cf0 );\
+\cf4 // Prints the total number of Democrats.\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Total number of Democrats: "\cf0 + \cf3 democrat_voters\cf0 );\
+\cf4 // Prints the total number of Republicans.\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Total number of Republicans: "\cf0 + \cf3 republican_voters\cf0 );\
+\cf4 //Prints the total number of Third Party Voters.\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Total number of Third Party Voters: "\cf0 + \cf3 other_voters\cf0 +\cf5 "\\n"\cf0 );\
+\cf4 // Prints the percent of female voters for Trump.\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Percent of female voters for Trump: "\cf0 + \cf3 percent_female_trump_voters\cf0 );\
+\cf4 // Prints the percent of female voters for \ul Biden\ulnone .\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Percent of female voters for Biden: "\cf0 + \cf3 percent_female_biden_voters\cf0 );\
+\cf4 // Prints the percent of male voters for Trump.\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Percent of male voters for Trump: "\cf0 + \cf3 percent_male_trump_voters\cf0 );\
+\cf4 // Prints the percent of male voters for \ul Biden\ulnone .\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Percent of male voters for Biden: "\cf0 + \cf3 percent_male_biden_voters\cf0 );\
+\cf4 // Prints the percent of Democrats voting for Trump.\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Percent of Democrats voting for Trump: "\cf0 + \cf3 percent_democrat_trump_voters\cf0 );\
+\cf4 // Prints the percent of Republicans voting for \ul Biden\ulnone .\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Percent of Republicans voting for Biden: "\cf0 + \cf3 percent_republican_biden_voters\cf0 +\cf5 "\\n"\cf0 );\
+\cf4 // Prints the percent of voters thinking Trump has done better to manage the economy.\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Percent of voters thinking Trump has done better to manage the economy: "\cf0 + \cf3 percent_trump_economy\cf0 );\
+\cf4 // Prints the percent of voters thinking Trump has done better to manage the civil unrest.\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Percent of voters thinking Trump has done better to manage the civil unrest: "\cf0 + \cf3 percent_trump_civil\cf0 );\
+\cf4 // Prints the percent of voters thinking Trump has done better to manage the \ul coronavirus\ulnone .\cf0 \
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Percent of voters thinking Trump has done better to manage the coronavirus: "\cf0 + \cf3 percent_trump_coronavirus\cf0 );\
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Percent of voters thinking Biden has done better to manage the economy: "\cf0 + \cf3 percent_biden_economy\cf0 );\
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Percent of voters thinking Biden has done better to manage the civil unrest: "\cf0 + \cf3 percent_biden_civil\cf0 );\
+System.
+\f3\i\b \cf6 out
+\f1\i0\b0 \cf0 .println(\cf5 "Percent of voters thinking Biden has done better to manage the coronavirus: "\cf0 + \cf3 percent_biden_coronavirus\cf0 );\
+\cf4 // Prints all required data.\cf0 \
+System.
+\f2\i exit
+\f1\i0 (0);\
+	\}\
+\}}
